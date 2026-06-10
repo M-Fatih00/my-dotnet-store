@@ -15,17 +15,18 @@ Admin panelinde ise ürün, kategori, slider, rol ve kullanıcı yönetimi (ekle
 Ana sayfa
 ![Ana Sayfa](docs/screenshots/Home.png)
 
-Ürünler
-![Ürünler](docs/screenshots/Products.png)
-
 Sepet
 ![Sepet](docs/screenshots/Cart.png)
+
+Siparişler
+![Siparişler](docs/screenshots/Orders.png)
+
+Ürünler(Admin)
+![Ürünler](docs/screenshots/Products.png)
 
 Admin paneli
 ![Admin Paneli](docs/screenshots/AdminDashboard.png)
 
-Siparişler
-![Siparişler](docs/screenshots/Orders.png)
 
 ## Kullandıklarım
 
