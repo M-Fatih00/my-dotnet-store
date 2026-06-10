@@ -21,11 +21,12 @@ Sepet
 Siparişler
 ![Siparişler](docs/screenshots/Orders.png)
 
+Admin paneli
+![Admin Paneli](docs/screenshots/AdminDashboard.png)
+
 Ürünler(Admin)
 ![Ürünler](docs/screenshots/Products.png)
 
-Admin paneli
-![Admin Paneli](docs/screenshots/AdminDashboard.png)
 
 
 ## Kullandıklarım
