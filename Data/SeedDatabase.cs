@@ -4,30 +4,26 @@ namespace my_dotnet_store.Models;
 
 public static class SeedDatabase
 {
-    public static async void Initialize(IApplicationBuilder app)
+    public static async Task Initialize(IApplicationBuilder app)
     {
-        var userManager = app.ApplicationServices
-                                .CreateScope()
-                                .ServiceProvider
-                                .GetRequiredService<UserManager<AppUser>>();
+        using var scope = app.ApplicationServices.CreateScope();
+        var services = scope.ServiceProvider;
 
-        var roleManager = app.ApplicationServices
-                                .CreateScope()
-                                .ServiceProvider
-                                .GetRequiredService<RoleManager<AppRole>>();
+        var userManager = services.GetRequiredService<UserManager<AppUser>>();
+        var roleManager = services.GetRequiredService<RoleManager<AppRole>>();
 
-        if(!roleManager.Roles.Any()) // Herhangi bir rol yoksa demek
+        if (!roleManager.Roles.Any()) 
         {
-            var admin = new AppRole {Name = "Admin"};
+            var admin = new AppRole { Name = "Admin" };
             await roleManager.CreateAsync(admin);
         }
-        
-        if(!userManager.Users.Any())
+
+        if (!userManager.Users.Any())
         {
             var admin = new AppUser
             {
-                AdSoyad = "Fatih Canıbek",
-                UserName = "fatihcanibek",
+                AdSoyad = "Fatih Mehmet",
+                UserName = "fatihmehmet",
                 Email = "admin@gmail.com"
             };
 
@@ -36,8 +32,8 @@ public static class SeedDatabase
 
             var customer = new AppUser
             {
-                AdSoyad = "Sadık Turan",
-                UserName = "sadikturan",
+                AdSoyad = "Mehmet Fatih",
+                UserName = "mehmetfatih",
                 Email = "customer@gmail.com"
             };
 
